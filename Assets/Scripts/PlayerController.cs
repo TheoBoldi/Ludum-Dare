@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public string playerName;
 
     public PlayerEntity entity;
+    public GameManager gameManager;
     private Player _mainPlayer;
 
     void Start()
@@ -31,6 +32,11 @@ public class PlayerController : MonoBehaviour
         if (_mainPlayer.GetButtonUp("Jump") && entity.IsJumping())
         {
             entity.StopJump();
+        }
+
+        if (_mainPlayer.GetButtonDown("Respawn"))
+        {
+            gameManager.Respawn();
         }
     }
 }
