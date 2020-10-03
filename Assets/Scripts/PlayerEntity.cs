@@ -54,7 +54,7 @@ public class PlayerEntity : MonoBehaviour
 
     private void Awake()
     {
-        boxCollider2D = GetComponentInChildren<BoxCollider2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
         _rigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         //anim.SetBool("IsIdle", true);

@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             entity.StopJump();
         }
 
-        if (_mainPlayer.GetButtonDown("Respawn"))
+        if (_mainPlayer.GetButtonDown("Respawn") && NoSpawn.canspawn)
         {
             gameManager.Respawn();
         }
