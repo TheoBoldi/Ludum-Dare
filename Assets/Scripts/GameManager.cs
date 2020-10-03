@@ -28,8 +28,12 @@ public class GameManager : MonoBehaviour
 
     public void Respawn()
     {
-        var dead = Instantiate(deadPlayer);
-        dead.transform.position = player.transform.position;
+        if (NoSpawn.canspawn)
+        {
+            var dead = Instantiate(deadPlayer);
+            dead.transform.position = player.transform.position;
+        }
+
         player.transform.position = respawnPoint.position;
         timer = initTimer;
         StartCoroutine(Timer());
