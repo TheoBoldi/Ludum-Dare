@@ -38,5 +38,10 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.Respawn();
         }
+
+        if (_mainPlayer.GetButtonDown("Reset"))
+        {
+            gameManager.Reset();
+        }
     }
 }
