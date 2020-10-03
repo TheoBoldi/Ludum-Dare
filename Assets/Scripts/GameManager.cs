@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         initTimer = timer;
         StartCoroutine(Timer());
     }
