@@ -56,4 +56,9 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => timer <= 0);
         Respawn();
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
