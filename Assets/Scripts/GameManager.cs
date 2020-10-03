@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
         player.transform.position = respawnPoint.position;
     }
 
+    public void Die()
+    {
+        player.transform.position = respawnPoint.position;
+    }
+
     public void Reset()
     {
         Scene scene = SceneManager.GetActiveScene();
