@@ -88,6 +88,34 @@ public class PlayerEntity : MonoBehaviour
                         _isOnground = true;
                 }
             }
+
+            RaycastHit2D[] hit2Dleft = Physics2D.LinecastAll(transform.position - new Vector3(0.5f,0,0), transform.position - new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+
+            Debug.DrawLine(transform.position - new Vector3(0.5f, 0, 0), transform.position - new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+
+            foreach (RaycastHit2D hit in hit2Dleft)
+            {
+                if (hit.collider != null)
+                {
+
+                    if (hit.collider.CompareTag("Ground"))
+                        _isOnground = true;
+                }
+            }
+
+            RaycastHit2D[] hit2Dright = Physics2D.LinecastAll(transform.position + new Vector3(0.5f, 0, 0), transform.position + new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+
+            Debug.DrawLine(transform.position + new Vector3(0.5f, 0, 0), transform.position + new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+
+            foreach (RaycastHit2D hit in hit2Dright)
+            {
+                if (hit.collider != null)
+                {
+
+                    if (hit.collider.CompareTag("Ground"))
+                        _isOnground = true;
+                }
+            }
         }
         _UpdateMove();
 
