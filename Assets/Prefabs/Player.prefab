@@ -58,7 +58,7 @@ MonoBehaviour:
   _isOnground: 0
   jumpSpeed: 5
   jumpDuration: 0.3
-  distanceRay: 1
+  distanceRay: 0.51
 --- !u!50 &6788346829625340111
 Rigidbody2D:
   serializedVersion: 4

@@ -89,9 +89,9 @@ public class PlayerEntity : MonoBehaviour
                 }
             }
 
-            RaycastHit2D[] hit2Dleft = Physics2D.LinecastAll(transform.position - new Vector3(0.5f,0,0), transform.position - new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+            RaycastHit2D[] hit2Dleft = Physics2D.LinecastAll(transform.position - new Vector3(0.25f, 0,0), transform.position - new Vector3(0.25f, 0, 0) + (Vector3.down) * distanceRay);
 
-            Debug.DrawLine(transform.position - new Vector3(0.5f, 0, 0), transform.position - new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+            Debug.DrawLine(transform.position - new Vector3(0.25f, 0, 0), transform.position - new Vector3(0.25f, 0, 0) + (Vector3.down) * distanceRay);
 
             foreach (RaycastHit2D hit in hit2Dleft)
             {
@@ -103,9 +103,9 @@ public class PlayerEntity : MonoBehaviour
                 }
             }
 
-            RaycastHit2D[] hit2Dright = Physics2D.LinecastAll(transform.position + new Vector3(0.5f, 0, 0), transform.position + new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+            RaycastHit2D[] hit2Dright = Physics2D.LinecastAll(transform.position + new Vector3(0.25f, 0, 0), transform.position + new Vector3(0.25f, 0, 0) + (Vector3.down) * distanceRay);
 
-            Debug.DrawLine(transform.position + new Vector3(0.5f, 0, 0), transform.position + new Vector3(0.5f, 0, 0) + (Vector3.down) * distanceRay);
+            Debug.DrawLine(transform.position + new Vector3(0.25f, 0, 0), transform.position + new Vector3(0.25f, 0, 0) + (Vector3.down) * distanceRay);
 
             foreach (RaycastHit2D hit in hit2Dright)
             {
