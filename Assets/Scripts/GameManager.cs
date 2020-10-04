@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     public IEnumerator Timer()
     {
         yield return new WaitUntil(() => timer <= 0);
+        dead.Play();
         Respawn();
     }
 
