@@ -5,6 +5,8 @@ using Rewired;
 
 public class PlayerController : MonoBehaviour
 {
+    public Animator anim;
+
     public string playerName;
 
     public PlayerEntity entity;
@@ -22,8 +24,23 @@ public class PlayerController : MonoBehaviour
         if (dirX != 0f)
         {
             dirX = Mathf.Sign(dirX);
+
+            if (dirX > 0 && entity.IsOnground())
+            {
+                anim.SetTrigger("Right");
+            }
+
+            if (dirX < 0 && entity.IsOnground())
+            {
+                anim.SetTrigger("Left");
+            }
         }
         entity.Move(dirX);
+
+        if (dirX == 0 && entity.IsOnground())
+        {
+            anim.SetTrigger("Idle");
+        }
 
         if (_mainPlayer.GetButtonDown("Jump") && entity.IsOnground())
         {
@@ -32,6 +49,11 @@ public class PlayerController : MonoBehaviour
         if (_mainPlayer.GetButtonUp("Jump") && entity.IsJumping())
         {
             entity.StopJump();
+        }
+
+        if (entity.IsJumping())
+        {
+            anim.SetTrigger("Jump");
         }
 
         if (_mainPlayer.GetButtonDown("Respawn") && NoSpawn.canspawn)
