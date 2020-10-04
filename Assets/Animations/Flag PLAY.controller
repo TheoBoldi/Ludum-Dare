@@ -6,7 +6,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Flag
+  m_Name: Flag PLAY
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -64,7 +64,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 41d7a4e27a6b92145989c0f2a661eabb, type: 2}
+  m_Motion: {fileID: 7400000, guid: c47100e36b9ced8458d71ab209726f77, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
