@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         if (NoSpawn.canspawn)
         {
             var dead = Instantiate(deadPlayer);
-            dead.transform.position = player.transform.position;
+            dead.transform.position = player.transform.position - new Vector3(0,0.08f,0);
         }
 
         player.transform.position = respawnPoint.position;
