@@ -4204,7 +4204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6267599258807278911, guid: 0d6b61ad06a771b4397049ba0e6788fd, type: 3}
       propertyPath: distanceRay
-      value: 0.6
+      value: 0.51
       objectReference: {fileID: 0}
     - target: {fileID: 6267599258963000120, guid: 0d6b61ad06a771b4397049ba0e6788fd, type: 3}
       propertyPath: m_IsActive

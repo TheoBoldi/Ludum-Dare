@@ -116,6 +116,24 @@ public class PlayerEntity : MonoBehaviour
                         _isOnground = true;
                 }
             }
+
+            RaycastHit2D[] hit2Dup = Physics2D.LinecastAll(transform.position, transform.position + (Vector3.up) * distanceRay);
+
+            Debug.DrawLine(transform.position, transform.position + (Vector3.up) * distanceRay);
+
+            foreach (RaycastHit2D hit in hit2Dup)
+            {
+                if (hit.collider != null)
+                {
+
+                    if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("DeadBottom"))
+                    {
+                        _jumpCountdown = 0f;
+                        StopJump();
+                        _UpdateGravity();
+                    }
+                }
+            }
         }
         _UpdateMove();
 

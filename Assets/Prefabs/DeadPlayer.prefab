@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9089499862725973379}
   - component: {fileID: 1990413114392839551}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: Collider
+  m_TagString: DeadBottom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
