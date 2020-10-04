@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
-        timerText.text = "0 : " + timer.ToString("F0");
+        timerText.text = timer.ToString("F0");
     }
 
     public void Respawn()
