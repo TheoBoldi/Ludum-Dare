@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public Animator anim;
+
+    public AudioSource dead;
+
     public float timer;
     private float initTimer;
     public Text timerText;
@@ -35,6 +39,8 @@ public class GameManager : MonoBehaviour
             dead.transform.position = player.transform.position - new Vector3(0,0.08f,0);
         }
 
+        anim.SetTrigger("Respawn");
+
         player.transform.position = respawnPoint.position;
         timer = initTimer;
         StartCoroutine(Timer());
@@ -44,6 +50,9 @@ public class GameManager : MonoBehaviour
     {
         player.transform.position = respawnPoint.position;
         timer = initTimer;
+
+        anim.SetTrigger("Respawn");
+        dead.Play();
     }
 
     public void Reset()
