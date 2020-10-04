@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         initTimer = timer;
         StartCoroutine(Timer());
+        TransitionController.instance?.FadeOut();
     }
 
     private void Update()
@@ -65,6 +66,18 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitUntil(() => timer <= 0);
         Respawn();
+    }
+
+    public void NextScene()
+    {
+        if(SceneManager.GetActiveScene().buildIndex + 2 > SceneManager.sceneCount)
+        {
+            TransitionController.instance?.FadeIn(() => SceneManager.LoadScene(0));
+        }
+        else
+        {
+            TransitionController.instance?.FadeIn(() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
+        }
     }
 
     public void Quit()
