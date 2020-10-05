@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
     public void NextScene()
     {
-        if(SceneManager.GetActiveScene().buildIndex + 2 > SceneManager.sceneCount)
+        if(SceneManager.GetActiveScene().buildIndex == 11)
         {
             TransitionController.instance?.FadeIn(() => SceneManager.LoadScene(0));
         }

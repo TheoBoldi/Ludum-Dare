@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Victor.unity
+    path: Assets/Scenes/Main Scene.unity
+    guid: 06e39054788f32f46bafb5ee90e139da
+  - enabled: 1
+    path: Assets/Scenes/LD_1.unity
     guid: 02e7ea24625e31a43a060f1c33a2d7f9
+  - enabled: 1
+    path: Assets/Scenes/LD_2.unity
+    guid: d38c6e19e8ef49740af4dc517398beb0
+  - enabled: 1
+    path: Assets/Scenes/LD_3.unity
+    guid: a6c84e8612edf4540a066946b1811b58
+  - enabled: 1
+    path: Assets/Scenes/LD_4.unity
+    guid: 41c187710799de648aa19b6c2bbab4d9
+  - enabled: 1
+    path: Assets/Scenes/LD_5.unity
+    guid: 965d2c9c9252e304abc4b8e390754d0d
+  - enabled: 1
+    path: Assets/Scenes/LD_6.unity
+    guid: 2d8ba1e150f9a0147bbfa7ddd481fe7b
+  - enabled: 1
+    path: Assets/Scenes/LD_7.unity
+    guid: 4d89b99d6810850419bdca337fa2ae63
+  - enabled: 1
+    path: Assets/Scenes/LD_8.unity
+    guid: 5111cc50c52f9b94b9bb0ef73168f47e
+  - enabled: 1
+    path: Assets/Scenes/LD_9.unity
+    guid: 69cb94fb5c9252a49b648d4982d1a715
+  - enabled: 1
+    path: Assets/Scenes/LD_10.unity
+    guid: a206371b18b6f7341aabf8d1e4b149fc
+  - enabled: 1
+    path: Assets/Scenes/LD_11.unity
+    guid: 933e76b7820f46d4fbe59378eb4485ac
   m_configObjects: {}
